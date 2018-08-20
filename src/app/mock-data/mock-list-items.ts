@@ -2,53 +2,53 @@ import { ListItems } from '../interface/list-items-interface';
 
 export const LISTITEMS: ListItems[] = [
   {
-    icon: '11',
+    icon: 'blur_on',
     title: 'Buttons',
-    shortDescription: 'poop'
+    shortDescription: 'button guide'
   },
   {
-    icon: '12',
+    icon: 'color_lens',
     title: 'Colors',
-    shortDescription: 'poop'
+    shortDescription: 'themes'
   },
   {
-    icon: '13',
-    title: 'butt holes',
-    shortDescription: 'poop'
+    icon: 'filter',
+    title: 'filter',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '14',
-    title: 'celery',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '15',
-    title: 'Magneta',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '16',
-    title: 'RubberMan',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '17',
-    title: 'Dynama',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '18',
-    title: 'Dr IQ',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '19',
-    title: 'Magma',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   },
   {
-    icon: '20',
-    title: 'Tornado',
-    shortDescription: 'poop'
+    icon: 'folder',
+    title: 'title',
+    shortDescription: 'a short description here'
   }
 ];

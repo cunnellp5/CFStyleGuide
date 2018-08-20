@@ -9,8 +9,6 @@ import { ListService } from '../../services/list.service';
   styleUrls: ['./list-view.component.css']
 })
 export class ListViewComponent implements OnInit {
-
-  items: string[];
   listItems: ListItems[];
 
   constructor(
@@ -18,12 +16,18 @@ export class ListViewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.items = ['a', 'b', 'c'];
     this.getList();
   }
 
   getList(): void {
     this.listService.getList()
-        .subscribe(listItems => this.listItems = listItems);
+        .subscribe(listItems => {
+          const result = listItems.sort((a, b) => {
+            const titleA = a.title.toUpperCase();
+            const titleB = b.title.toUpperCase();
+            return titleA > titleB ? 1 : -1;
+          });
+          return this.listItems = result;
+        });
   }
 }
