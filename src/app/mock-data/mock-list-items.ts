@@ -4,7 +4,8 @@ export const LISTITEMS: ListItems[] = [
   {
     icon: 'blur_on',
     title: 'Buttons',
-    shortDescription: 'button guide'
+    shortDescription: 'button guide',
+    link: 'buttons'
   },
   {
     icon: 'color_lens',
