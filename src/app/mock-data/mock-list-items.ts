@@ -20,6 +20,12 @@ export const LISTITEMS: ListItems[] = [
     link: 'icons'
   },
   {
+    icon: 'folder',
+    title: 'Forms',
+    shortDescription: 'all the forms!',
+    link: 'forms'
+  },
+  {
     icon: 'color_lens',
     title: 'Colors',
     shortDescription: 'themes'
