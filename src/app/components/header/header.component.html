@@ -1,6 +1,12 @@
 <mat-toolbar color="primary" class="shadow">
-  <mat-icon>{{ icon }}</mat-icon>
-  
+  <button  mat-icon-button routerLink="../" *ngIf="showBack">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <button mat-icon-button disableRipple="true" *ngIf="!showBack">
+    <mat-icon>{{ icon }}</mat-icon>
+  </button>
+
   <span>&nbsp;{{ title }}</span>
 
   <!-- This fills the remaining space of the current row -->
