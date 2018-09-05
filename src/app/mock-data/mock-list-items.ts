@@ -14,13 +14,13 @@ export const LISTITEMS: ListItems[] = [
     link: 'lists'
   },
   {
-    icon: 'icon',
+    icon: 'folder_special',
     title: 'Icons',
     shortDescription: 'all the icons!',
     link: 'icons'
   },
   {
-    icon: 'folder',
+    icon: 'list',
     title: 'Forms',
     shortDescription: 'all the forms!',
     link: 'forms'

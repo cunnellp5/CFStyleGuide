@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.title = 'CF Style Guide';
-    this.icon = 'insert_emoticon'; // keyboard_backspace for back
+    this.icon = 'stars'; // keyboard_backspace for back
   }
 
   ngOnChanges(changes) {
