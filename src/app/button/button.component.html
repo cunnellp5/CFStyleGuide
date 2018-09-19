@@ -1,65 +1,81 @@
-<h3>Basic Buttons</h3>
+<h3>Basic Buttons</h3> <mat-checkbox [(ngModel)]="isDisabled">Disable All</mat-checkbox>
 <div class="button-row">
-  <button mat-button>Basic</button>
+  <button mat-button [disabled]="isDisabled">Basic</button>
   <!-- need to switch out < to &lt; -->
   <!-- and > to &gt; -->
   <blockquote>
   <pre><code>
-    &lt;button mat-button&gt;Basic&lt;/button&gt;
+    &lt;button mat-button [disabled]="isDisabled"&gt;Basic&lt;/button&gt;
   </code></pre>
   </blockquote>
-  <button mat-button color="primary">Primary</button>
+  <button mat-button color="primary" [disabled]="isDisabled">Primary</button>
     <pre><code>
-      &lt;button mat-button color="primary"&gt;Primary&lt;/button&gt;
+      &lt;button mat-button color="primary" [disabled]="isDisabled"&gt;Primary&lt;/button&gt;
     </code></pre>
-  <button mat-button color="accent">Accent</button>
-  <button mat-button color="warn">Warn</button>
+  <button mat-button color="accent" [disabled]="isDisabled">Accent</button>
+  <button mat-button color="warn" [disabled]="isDisabled">Warn</button>
   <button mat-button disabled>Disabled</button>
-  <a mat-button routerLink=".">Link</a>
+  <a mat-button routerLink="." [disabled]="isDisabled">Link</a>
 </div>
+
+<h3>Button Toggle</h3>
+<div>
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle value="bold" [disabled]="isDisabled">Bold</mat-button-toggle>
+  <mat-button-toggle value="italic" [disabled]="isDisabled">Italic</mat-button-toggle>
+  <mat-button-toggle value="underline" [disabled]="isDisabled">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+</div>
+
+<h5>justify is disabled</h5>
+<mat-button-toggle-group #group="matButtonToggleGroup">
+  <mat-button-toggle value="left" [disabled]="isDisabled">
+    <mat-icon>format_align_left</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="center" [disabled]="isDisabled">
+    <mat-icon>format_align_center</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="right" [disabled]="isDisabled">
+    <mat-icon>format_align_right</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value="justify" disabled>
+    <mat-icon>format_align_justify</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+<div class="example-selected-value">Selected value: {{group.value}}</div>
 
 <h3>Raised Buttons</h3>
 <div class="button-row">
-  <button mat-raised-button>Basic</button>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button color="warn">Warn</button>
+  <button mat-raised-button [disabled]="isDisabled">Basic</button>
+  <button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>
+  <button mat-raised-button color="accent" [disabled]="isDisabled">Accent</button>
+  <button mat-raised-button color="warn" [disabled]="isDisabled">Warn</button>
   <button mat-raised-button disabled>Disabled</button>
-  <a mat-raised-button routerLink=".">Link</a>
+  <a mat-raised-button routerLink="." [disabled]="isDisabled">Link</a>
 </div>
 
 <h3>Stroked Buttons</h3>
 <div class="button-row">
-  <button mat-stroked-button>Basic</button>
-  <button mat-stroked-button color="primary">Primary</button>
-  <button mat-stroked-button color="accent">Accent</button>
-  <button mat-stroked-button color="warn">Warn</button>
+  <button mat-stroked-button [disabled]="isDisabled">Basic</button>
+  <button mat-stroked-button color="primary" [disabled]="isDisabled">Primary</button>
+  <button mat-stroked-button color="accent" [disabled]="isDisabled">Accent</button>
+  <button mat-stroked-button color="warn" [disabled]="isDisabled">Warn</button>
   <button mat-stroked-button disabled>Disabled</button>
-  <a mat-stroked-button routerLink=".">Link</a>
-</div>
-
-<h3>Flat Buttons</h3>
-<div class="button-row">
-  <button mat-flat-button>Basic</button>
-  <button mat-flat-button color="primary">Primary</button>
-  <button mat-flat-button color="accent">Accent</button>
-  <button mat-flat-button color="warn">Warn</button>
-  <button mat-flat-button disabled>Disabled</button>
-  <a mat-flat-button routerLink=".">Link</a>
+  <a mat-stroked-button routerLink="." [disabled]="isDisabled">Link</a>
 </div>
 
 <h3>Icon Buttons</h3>
 <div class="button-row">
-  <button mat-icon-button>
+  <button mat-icon-button [disabled]="isDisabled">
     <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
   </button>
-  <button mat-icon-button color="primary">
+  <button mat-icon-button color="primary" [disabled]="isDisabled">
     <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
   </button>
-  <button mat-icon-button color="accent">
+  <button mat-icon-button color="accent" [disabled]="isDisabled">
     <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
   </button>
-  <button mat-icon-button color="warn">
+  <button mat-icon-button color="warn" [disabled]="isDisabled">
     <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
   </button>
   <button mat-icon-button disabled>
@@ -69,26 +85,13 @@
 
 <h3>Fab Buttons</h3>
 <div class="button-row">
-  <button mat-fab>Basic</button>
-  <button mat-fab color="primary">Primary</button>
-  <button mat-fab color="accent">Accent</button>
-  <button mat-fab color="warn">Warn</button>
+  <button mat-fab [disabled]="isDisabled">Basic</button>
+  <button mat-fab color="primary" [disabled]="isDisabled">Primary</button>
+  <button mat-fab color="accent" [disabled]="isDisabled">Accent</button>
+  <button mat-fab color="warn" [disabled]="isDisabled">Warn</button>
   <button mat-fab disabled>Disabled</button>
-  <button mat-fab>
+  <button mat-fab [disabled]="isDisabled">
     <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
   </button>
-  <a mat-fab routerLink=".">Link</a>
-</div>
-
-<h3>Mini Fab Buttons</h3>
-<div class="button-row">
-  <button mat-mini-fab>Basic</button>
-  <button mat-mini-fab color="primary">Primary</button>
-  <button mat-mini-fab color="accent">Accent</button>
-  <button mat-mini-fab color="warn">Warn</button>
-  <button mat-mini-fab disabled>Disabled</button>
-  <button mat-mini-fab>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <a mat-mini-fab routerLink=".">Link</a>
+  <a mat-fab routerLink="." [disabled]="isDisabled">Link</a>
 </div>
