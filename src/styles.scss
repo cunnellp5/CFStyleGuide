@@ -2,7 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html, body { height: 100%; }
 
-body { 
+body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
 }
@@ -10,4 +10,8 @@ body {
 .basic-container {
   padding: 30px;
   width: 50%;
+}
+
+.padL24 {
+  padding-left: 24px;
 }

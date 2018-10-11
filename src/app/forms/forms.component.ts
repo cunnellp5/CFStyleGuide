@@ -17,7 +17,7 @@ export const _filter = (opt: string[], value: string): string[] => {
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.css']
+  styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent implements OnInit {
 
